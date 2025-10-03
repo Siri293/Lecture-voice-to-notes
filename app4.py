@@ -20,7 +20,7 @@ except ImportError:
 
 # --- Gemini API Configuration ---
 # In this environment, the API_KEY is left blank and automatically provided at runtime.
-API_KEY = "AIzaSyBPW-iSeuA2Ze0hv8268PmUmmd4gaJiJaU" 
+API_KEY = "YOUR_API_KEY" 
 GEMINI_MODEL = "gemini-2.5-flash-preview-05-20"
 API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent?key={API_KEY}"
 
