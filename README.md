@@ -27,39 +27,62 @@ This application provides a seamless pipeline from audio input to effective know
 * **Scoring & Feedback:** Provides a final score, percentage, and personalized study tips.
 
 ---
+Requirements:
+streamlit
+numpy
+soundfile
+faster-whisper
+librosa
+requests
+streamlit-mic-recorder
 
-## 🛠️ Requirements & Prerequisites
+🚀 Installation Steps
+Step 1: Clone the Repository (If applicable)
+If your code is hosted on GitHub, start by cloning the repository.
 
-### Technical Requirements
-* **Python:** 3.8 or higher.
-* **API Key:** A **Gemini API Key** is mandatory for all summarization and quiz generation features.
+Bash
 
-### Installation
+git clone [YOUR_REPO_URL]
+cd lecture-voice-to-notes
+Step 2: Install Libraries
+This application relies on several specialized libraries for audio processing, transcription, and the user interface.
 
-1.  **Clone the Repository:**
-    ```bash
-    git clone [YOUR_REPO_URL]
-    cd lecture-voice-to-notes
-    ```
+Run the following command in your terminal to install all necessary packages:
 
-2.  **Install Libraries:** Run the following command to install all necessary Python packages:
-    ```bash
-    pip install streamlit numpy soundfile librosa requests faster-whisper streamlit-mic-recorder
-    ```
-    *Note: `faster-whisper` relies on `ctranslate2`, and `librosa` may require system dependencies on some operating systems. Consult their documentation if you encounter specific build errors.*
+Bash
 
----
+pip install streamlit numpy soundfile librosa requests faster-whisper streamlit-mic-recorder
+Brief explanation of the key libraries:
 
-## 🚀 Setup and Running the App
+faster-whisper: Used for fast and efficient transcription of the audio.
 
-### 1. Set Your API Key
+librosa: Used for resampling and processing complex audio formats to meet Whisper's requirements (16000 Hz, mono).
 
-The application relies on the Gemini API for its core intelligence features. You must set your API key as an environment variable.
+streamlit-mic-recorder: The custom component that enables live microphone input in the Streamlit app.
 
-| Variable Name | Purpose |
-| :--- | :--- |
-| `GEMINI_API_KEY` | Your key starting with `AIza...` |
+Step 3: Set the Gemini API Key
+The application relies on this key to access the Gemini model for summarization and quiz generation.
 
-**Example (Linux/macOS):**
-```bash
+Set the key as an environment variable in your terminal session before running the app.
+
+On Linux/macOS:
+
+Bash
+
 export GEMINI_API_KEY="YOUR_GEMINI_API_KEY_HERE"
+On Windows (Command Prompt):
+
+Bash
+
+set GEMINI_API_KEY="YOUR_GEMINI_API_KEY_HERE"
+Note: The provided script has a placeholder API_KEY variable ("AIzaSyBPW-iSeuA2Ze0hv8268PmUmmd4gaJiJaU"), which will likely fail unless it is a valid, configured key. It is best practice to use the environment variable as shown above, or Streamlit Secrets.
+
+▶️ Running the Application
+Once all prerequisites are met, run the Streamlit application from your terminal:
+
+Bash
+
+streamlit run your_app_script_name.py
+(Replace your_app_script_name.py with the actual file name of your Python script.)
+
+The app will launch in your web browser at http://localhost:8501.
