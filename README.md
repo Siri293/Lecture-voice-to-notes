@@ -414,5 +414,6 @@ For issues, questions, or suggestions:
 - [ ] Mobile app version
 
 ---
+The app will launch automatically in your web browser at http://localhost:8501.
 
 **Star ⭐ this repository if you find it helpful!**
