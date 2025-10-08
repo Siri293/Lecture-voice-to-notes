@@ -1,0 +1,7 @@
+streamlit
+numpy
+soundfile
+faster-whisper
+librosa
+requests
+streamlit-mic-recorder
